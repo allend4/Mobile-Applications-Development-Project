@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-back-button></ion-back-button> <!-- back button to previous route/page -->
+    </ion-buttons>
+    <ion-title>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- [(ngModel)] binds data / (search) search function -->
+  <ion-searchbar [(ngModel)]="searchTitle" (search)="performSearch()"></ion-searchbar><!-- search bar -->
+  <!--*ngFor - access to local variable / [routerLink] navigate to new page -->
+  <ion-card *ngFor="let movie of MovieData"  [routerLink]="['/movie-details']" (click)="filmInfo(movie)">
+    <img src="{{movie.Poster}}" /> <!-- pull movie api data. poster image -->
+    <ion-card-header>
+      <ion-card-title>{{movie.Title}}</ion-card-title> <!-- pull movie api data. title -->
+    </ion-card-header>
+    <ion-card-content>
+     <!-- {{movie.Year}}  pull movie api data. year -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

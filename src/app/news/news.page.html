@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let articles of NewsData" (click)="loadNews(articles.url)">
+    <img src="{{articles.urlToImage}}" />
+    <ion-card-header>
+      <ion-card-title>{{articles.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{articles.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

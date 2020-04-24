@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> <!-- ionic back button -->
+    </ion-buttons>
+    <ion-title>Cinema</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let weather of weatherData"> <!-- access to local variable -->
+<ion-button (click)="myLocation()" >find me</ion-button> <!-- fucntion activates on click -->
+{{weather.description}}
+</ion-content>

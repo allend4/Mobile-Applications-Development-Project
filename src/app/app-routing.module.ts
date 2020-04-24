@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'movie',
+    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
+  },
+  {
+    path: 'movie-details',
+    loadChildren: () => import('./movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
+  },
+  {
+    path: 'news',
+    loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'news-details',
+    loadChildren: () => import('./news-details/news-details.module').then( m => m.NewsDetailsPageModule)
+  },
+  {
+    path: 'extra',
+    loadChildren: () => import('./extra/extra.module').then( m => m.ExtraPageModule)
+  },
 ];
 
 @NgModule({
