@@ -12,13 +12,16 @@
     <p>whats your favourite film?</p>
   
     <ion-item>
-        <ion-input [(ngModel)]="info" placeholder="Enter movie.."></ion-input>
+        <ion-input [(ngModel)]="movie" placeholder="Enter movie.."></ion-input>
     </ion-item>
     <ion-button (click)="save()" color="success">save</ion-button>
 
     <ion-list >
       <ion-item>
-        {{info}}
+        {{movie}}
       </ion-item> 
     </ion-list>
+    <ion-item>
+      <p color="tertiary">Favourite film: {{film}}</p>
+    </ion-item>
 </ion-content>

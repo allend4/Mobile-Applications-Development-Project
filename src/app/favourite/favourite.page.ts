@@ -9,22 +9,23 @@ import { Storage } from '@ionic/storage'; // storage
 export class FavouritePage implements OnInit {
 
   // variables
-  info:any[];
-  data:string;
+  movie:string;
+  film:string;
 
   constructor(private storage:Storage) { 
 
   }
 
   save() {
-    console.log(this.info); // test data on console
-    this.storage.set("info", this.data); // save info to storage
+    console.log(this.movie); // test data on console
+    this.storage.set("movie", this.movie); // save info to storage
+    
   } // END save
 
   ngOnInit() {
-    this.storage.get("data").then(
+    this.storage.get("movie").then(
       (data)=>{
-        this.data = data;
+        this.film = data;
       }
     ).catch(
       (error)=>{

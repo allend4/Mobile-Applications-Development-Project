@@ -40,6 +40,16 @@ export class ExtraPage implements OnInit {
       }
     );
     console.log(this.weatherData); // test data in console
+
+    /* // work in map api
+    // callback method that is invoked immediately
+    this.serviceService.GetMapData().subscribe(
+      (data)=>{ // gets and stores movie api data
+        this.MapData = data.Search;
+        this.map = data;
+      }
+    ); 
+    */
   } // END ngOnInit
 
  } // END ExtraPage

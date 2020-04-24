@@ -37,4 +37,8 @@ export class ServiceService {
     return this.httpClient.get('http://api.openweathermap.org/data/2.5/weather?q=Galway&appid=cb2d170ac04ef1d87ddedadaeb18bea7');
   } // END GetWeatherData
 
+  GetMapData():Observable<any>{ // http gets api data 
+    return this.httpClient.get('http://api.openweathermap.org/data/2.5/weather?q=Galway&appid=cb2d170ac04ef1d87ddedadaeb18bea7');
+  } // END GetWeatherData
+
 } // END ServiceService
