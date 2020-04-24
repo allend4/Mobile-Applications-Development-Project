@@ -1,16 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Movie App
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="bg-style">
+  <img src="../../assets/images/logo.png">
+  <br>
 <!-- link to specific routes - navigate to new page -->  
-<ion-button [routerLink]="['/movie']">Search Movies</ion-button>
-<br>
-<ion-button [routerLink]="['/news']">Movie News</ion-button>
-<br>
-<ion-button [routerLink]="['/extra']">Nearest Cinema</ion-button>
+  <ion-button [routerLink]="['/movie']" size="medium" color="primary">
+    <ion-icon name="film"></ion-icon>&nbsp; Search Movies</ion-button>
+  <br>
+  <ion-button [routerLink]="['/news']" size="medium" color="secondary">
+    <ion-icon name="book"></ion-icon>&nbsp; Movie News</ion-button>
+  <br>
+  <ion-button [routerLink]="['/extra']" size="medium" color="tertiary"> 
+    <ion-icon name="videocam"></ion-icon>&nbsp; Nearest Cinema</ion-button>
+  <br>
+  <ion-button [routerLink]="['/favourite']" size="medium" color="success">
+    <ion-icon name="star"></ion-icon>&nbsp; Favourites</ion-button>
 </ion-content>

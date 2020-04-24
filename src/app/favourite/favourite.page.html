@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> <!-- ionic back button -->
+    </ion-buttons>
+    <ion-title>Favourites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content padding>
+    <p>whats your favourite film?</p>
+  
+    <ion-item>
+        <ion-input [(ngModel)]="info" placeholder="Enter movie.."></ion-input>
+    </ion-item>
+    <ion-button (click)="save()" color="success">save</ion-button>
+
+    <ion-list >
+      <ion-item>
+        {{info}}
+      </ion-item> 
+    </ion-list>
+</ion-content>

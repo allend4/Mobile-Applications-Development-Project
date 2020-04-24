@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'extra',
     loadChildren: () => import('./extra/extra.module').then( m => m.ExtraPageModule)
   },
+  {
+    path: 'favourite',
+    loadChildren: () => import('./favourite/favourite.module').then( m => m.FavouritePageModule)
+  },
 ];
 
 @NgModule({
